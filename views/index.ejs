@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p class="py-12">Welcome to <%= title %></p>
+    <% if (messages.length > 0) { %>
+      <% messages.forEach(message => { %>
+        <h3><%= message.text %></h3>
+        <p><%= message.user %></p>
+        <p><%= message.added.toLocaleString() %></p>
+      <% }) %>
+    <% } else { %>
+      <p>There are no messages to display.</p>
+    <% } %>
   </body>
 </html>
