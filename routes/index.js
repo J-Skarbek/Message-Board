@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
   ]
 
 
-  res.render('index', { title: 'Express', messages });
+  res.render('index', { title: 'Mini Message Board', messages });
 });
 
 module.exports = router;
