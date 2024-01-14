@@ -8,14 +8,16 @@
   <body>
     <h1><%= title %></h1>
     <p class="py-12">Welcome to <%= title %></p>
+    <div class="messages-container">
     <% if (messages.length > 0) { %>
       <% messages.forEach(message => { %>
-        <div class="message-container flex flex-col">
-          <h3><%= message.text %></h3>
-          <p><%= message.user %></p>
-          <p><%= message.added.toLocaleString() %></p>
+        <div class="message-container flex flex-col w-1/2 border-2 my-2 bg-white odd:bg-gray-100">
+          <h3 class="message text-xl"><%= message.text %></h3>
+          <p class="text-sm"><%= message.user %></p>
+          <p class="text-xs"><%= message.added.toLocaleString() %></p>
         </div>
       <% }) %>
+    </div>
     <% } else { %>
       <p>There are no messages to display.</p>
     <% } %>
