@@ -6,13 +6,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p class="py-12">Welcome to <%= title %></p>
-    <form action="post">
-      <input type="textarea" name="message" id="message" placeholder="Enter your message here...">
-      <input type="text" name="user_name" id="user_name" placeholder="Enter your name here">
-      <input type="hidden" name="date" value="<%= new Date().toLocaleString() %>">
-      <button type="submit">Post New message</button>
-    </form>
+    <h1 class="py-12 text-xl font-bold mb-4">Create A <%= title %></p>
+    <div class="form-container w-1/2">
+      <form action="post" method="POST" class="flex flex-col">
+        <input type="textarea" name="message" id="message" class="my-2 border border-black" placeholder="Enter your message here...">
+        <input type="text" name="user_name" id="user_name" class="my-2 border border-black"  placeholder="Enter your name here">
+        <input type="hidden" name="date" value="<%= new Date().toLocaleString() %>">
+        <button type="submit" class="w-1/2 my-2 border border-red-200">Post New message</button>
+      </form>
+    </div>
   </body>
 </html>
